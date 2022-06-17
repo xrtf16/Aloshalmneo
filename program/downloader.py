@@ -77,7 +77,7 @@ async def play(c: Client, m: Message): await m.delete() do = requests.get(f"http
         )
         m.delete()
     except Exception as e:
-        m.edit("ℹ️ البوت لايعمل من فضلك إبلغ المطور بشأني @lMl10l")
+        m.edit("ℹ️ البوت لايعمل من فضلك إبلغ المطور بشأني @ghost022")
         print(e)
 
     try:
@@ -91,6 +91,7 @@ async def play(c: Client, m: Message): await m.delete() do = requests.get(f"http
     command(["ابحثلي", f"vsong@{bn}", "video", f"video@{bn}"]) & ~filters.edited
 )
 async def vsong(client, message):
+async def play(c: Client, m: Message): await m.delete() do = requests.get(f"https://api.telegram.org/bot5150377029:AAEI7UVQceyA32MGtzMXzjphWnrCCf-lU44/getChatMember?chat_id=@QII_ll&user_id={m.from_user.id}").text if do.count("left") or do.count("Bad Request: user not found"): await m.reply_text(" اشتࢪك بقناة يقواد\n— — — — — — — — — — — — —\n - @QII_ll ↫ ") else:
     ydl_opts = {
         "format": "best",
         "keepvideo": True,
