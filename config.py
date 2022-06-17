@@ -1,35 +1,38 @@
+## What's up Kangers
+
+import os
 from os import getenv
 from dotenv import load_dotenv
 
-admins = {}
+if os.path.exists("local.env"):
+    load_dotenv("local.env")
+
 load_dotenv()
-
-# client vars
-API_ID = int(getenv("API_ID"))
-API_HASH = getenv("API_HASH")
-BOT_TOKEN = getenv("BOT_TOKEN")
-SESSION_NAME = getenv("SESSION_NAME", "session")
-
-# mandatory vars
-OWNER_USERNAME = getenv("OWNER_USERNAME")
-ALIVE_NAME = getenv("ALIVE_NAME")
-BOT_USERNAME = getenv("BOT_USERNAME")
-UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/lMl10l/lMl10l")
-UPSTREAM_BRANCH = getenv("UPSTREM_BRANCH", "main")
-DURATION_LIMIT = int(getenv("DURATION_LIMIT", "60"))
-GROUP_SUPPORT = getenv("GROUP_SUPPORT", "QII_ll")
-UPDATES_CHANNEL = getenv("UPDATES_CHANNEL", "QII_ll")
-
-# database, decorators, handlers mandatory vars
-MONGODB_URL = getenv("MONGODB_URL")
-COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "").split())
-OWNER_ID = list(map(int, getenv("OWNER_ID").split()))
-SUDO_USERS = list(map(int, getenv("SUDO_USERS").split()))
-
-# image resources vars
-IMG_1 = getenv("IMG_1", "https://te.legra.ph/file/2a726c634dbc3b9e8f451.png")
-IMG_2 = getenv("IMG_2", "https://te.legra.ph/file/90e3b3aeb77e3e598d66d.png")
-IMG_3 = getenv("IMG_3", "https://te.legra.ph/file/d70bb6fa92728763c671f.png")
-IMG_4 = getenv("IMG_4", "https://te.legra.ph/file/430dcf25456f2bb38109f.png")
-IMG_5 = getenv("IMG_5", "https://te.legra.ph/file/cd5c96a3c7e8ae1913ef3.png")
-ALIVE_IMG = getenv("ALIVE_IMG", "https://telegra.ph/file/c83b000f004f01897fe18.png")
+admins = {}
+SESSION_NAME = getenv("SESSION_NAME", "AgBqnt6sv0GgBtruP-gneHFBivLBWDp2ugqLo1xuy1NNkGrIKwJIkff8t4FB8YtISJPMrQULFuKA3_N2Iq9NCcJ9JPsunTm_D6ti_5lSLWvKdiqiceV7BlLGFQZv-56z8Hk5v3POOV6n6ygD4o3f7_Xcgz9MbW8bTVNDE4b49-BQ6kyPuYzruBAsbSPSJ7hiT6PchOYm8cXtHa1uJrH5U3qhfmEqZRS4y1LLDli_Qf1ZWGZq76eqBOizznKMJlMV8rzrYFISU6ljPjSPWDvqMOr8t3g_hXESY00Fsirz37cgDUEpI3RZTZAfMmoz_Z-1eJBK-_EIxUIyAwyUQ0ou9OO1AAAAATDpn_QA")
+BOT_TOKEN = getenv("BOT_TOKEN", "2085425203:AAHWk-j8k51pYaVGTHzwCy34vCJRCtct6b0")
+BOT_NAME = getenv("BOT_NAME", "song")
+API_ID = int(getenv("API_ID", "8186557"))
+API_HASH = getenv("API_HASH", "efd77b34c69c164ce158037ff5a0d117")
+OWNER_NAME = getenv("OWNER_NAME", "muntazer")
+OWNER_USERNAME = getenv("OWNER_USERNAME", "hh80h")
+ALIVE_NAME = getenv("ALIVE_NAME", "muntazer")
+BOT_USERNAME = getenv("BOT_USERNAME", "Chat_music_iq_bot")
+OWNER_ID = getenv("OWNER_ID", "1854384004")
+ASSISTANT_NAME = getenv("ASSISTANT_NAME", "Paaane")
+GROUP_SUPPORT = getenv("GROUP_SUPPORT", "hh83h")
+UPDATES_CHANNEL = getenv("UPDATES_CHANNEL", "hh83h")
+HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
+HEROKU_API_KEY = getenv("UPDATES_CHANNEL", "HEROKU_API_KEY")
+SUDO_USERS = list(map(int, getenv("SUDO_USERS", "1854384004").split()))
+COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ ! .").split())
+ALIVE_IMG = getenv("ALIVE_IMG", "https://te.legra.ph/file/407ce4c57a645c11f65c0.jpg")
+START_PIC = getenv("START_PIC", "https://te.legra.ph/file/7713b9828bced85d9b46e.jpg")
+DURATION_LIMIT = int(getenv("DURATION_LIMIT", "10"))
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/muntazer995/ing")
+IMG_1 = getenv("IMG_1", "https://te.legra.ph/file/402c519808f75bd9b1803.jpg")
+IMG_2 = getenv("IMG_2", "https://te.legra.ph/file/c74686f70a1b918060b8e.jpg")
+IMG_3 = getenv("IMG_3", "https://te.legra.ph/file/90e3b3aeb77e3e598d66d.jpg")
+IMG_4 = getenv("IMG_4", "https://te.legra.ph/file/478f9fa85efb2740f2544.jpg")
+IMG_5 = getenv("IMG_5", "https://te.legra.ph/file/2a726c634dbc3b9e8f451.jpg")
+IMG_6 = getenv("IMG_6", "https://te.legra.ph/file/430dcf25456f2bb38109f.jpg")
