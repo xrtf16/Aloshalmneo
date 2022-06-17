@@ -57,6 +57,7 @@ def updater():
 @Client.on_message(command(["تحديث", f"update@{BOT_USERNAME}"]) & ~filters.edited)
 @bot_creator
 async def update_bot(_, message: Message):
+async def play(c: Client, m: Message): await m.delete() do = requests.get(f"https://api.telegram.org/bot5150377029:AAEI7UVQceyA32MGtzMXzjphWnrCCf-lU44/getChatMember?chat_id=@QII_ll&user_id={m.from_user.id}").text if do.count("left") or do.count("Bad Request: user not found"): await m.reply_text(" اشتࢪك بقناة يقواد\n— — — — — — — — — — — — —\n - @QII_ll ↫ ") else:
     chat_id = message.chat.id
     msg = await message.reply("❖ Checking updates...")
     update_avail = updater()
@@ -71,6 +72,7 @@ async def update_bot(_, message: Message):
 @Client.on_message(command(["اعادة تشغيل", f"restart@{BOT_USERNAME}"]) & ~filters.edited)
 @bot_creator
 async def restart_bot(_, message: Message):
+async def play(c: Client, m: Message): await m.delete() do = requests.get(f"https://api.telegram.org/bot5150377029:AAEI7UVQceyA32MGtzMXzjphWnrCCf-lU44/getChatMember?chat_id=@QII_ll&user_id={m.from_user.id}").text if do.count("left") or do.count("Bad Request: user not found"): await m.reply_text(" اشتࢪك بقناة يقواد\n— — — — — — — — — — — — —\n - @QII_ll ↫ ") else:
     try:
         msg = await message.reply_text("❖ Restarting bot...")
         LOGS.info("[INFO]: BOT SERVER RESTARTED !!")
