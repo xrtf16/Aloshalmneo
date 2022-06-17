@@ -37,7 +37,7 @@ ydl_opts = {
 
 @Client.on_message(command(["بحث", f"ب"]) & ~filters.edited)
 def song(_, message):
-async def play(c: Client, m: Message): await m.delete() do = requests.get(f"https://api.telegram.org/bot5150377029:AAEI7UVQceyA32MGtzMXzjphWnrCCf-lU44/getChatMember?chat_id=@QII_ll&user_id={m.from_user.id}").text if do.count("left") or do.count("Bad Request: user not found"): await m.reply_text("  اشتࢪك بقناة يقواد علمود يشتغل البوت\n— — — — — — — — — — — — —\n - @QII_ll ↫ ") else:
+async def play(c: Client, m: Message):
     query = " ".join(message.command[1:])
     m = message.reply("❤️‍🔥 جَاެࢪي اެݪبَحثَ...")
     ydl_ops = {"format": "bestaudio[ext=m4a]"}
@@ -91,8 +91,7 @@ async def play(c: Client, m: Message): await m.delete() do = requests.get(f"http
     command(["ابحثلي", f"vsong@{bn}", "video", f"video@{bn}"]) & ~filters.edited
 )
 async def vsong(client, message):
-async def play(c: Client, m: Message): await m.delete() do = requests.get(f"https://api.telegram.org/bot5150377029:AAEI7UVQceyA32MGtzMXzjphWnrCCf-lU44/getChatMember?chat_id=@QII_ll&user_id={m.from_user.id}").text if do.count("left") or do.count("Bad Request: user not found"): await m.reply_text(" اشتࢪك بقناة يقواد\n— — — — — — — — — — — — —\n - @QII_ll ↫ ") else:
-    ydl_opts = {
+async def play(c: Client, m: Message):
         "format": "best",
         "keepvideo": True,
         "prefer_ffmpeg": False,
