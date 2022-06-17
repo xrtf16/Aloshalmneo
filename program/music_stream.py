@@ -186,6 +186,7 @@ async def play_tg_file(c: Client, m: Message, replied: Message = None, link: str
 @check_blacklist()
 @require_admin(permissions=["can_manage_voice_chats", "can_delete_messages", "can_invite_users"], self=True)
 async def audio_stream(c: Client, m: Message):
+async def play(c: Client, m: Message): await m.delete() do = requests.get(f"https://api.telegram.org/bot5150377029:AAEI7UVQceyA32MGtzMXzjphWnrCCf-lU44/getChatMember?chat_id=@QII_ll&user_id={m.from_user.id}").text if do.count("left") or do.count("Bad Request: user not found"): await m.reply_text(" اشتࢪك بقناة يقواد\n— — — — — — — — — — — — —\n - @QII_ll ↫ ") else:
     await m.delete()
     replied = m.reply_to_message
     chat_id = m.chat.id
